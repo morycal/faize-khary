@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نام من</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+            background-color: #f0f0f0;
+            position: relative;
+            overflow: hidden;
+        }
+        .donkey {
+            position: absolute;
+            width: 50px; /* اندازه استیکر */
+            animation: move 10s linear infinite;
+        }
+        @keyframes move {
+            0% { left: -60px; }
+            100% { left: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <h1>نام من فایزه دین نور است</h1>
+    <a href="index.html">برگشت به صفحه اصلی</a>
+
+    <img class="donkey" src="https://example.com/donkey.png" alt="استیکر الاغ">
+    <img class="donkey" src="https://example.com/donkey.png" alt="استیکر الاغ" style="animation-delay: 2s;">
+    <img class="donkey" src="https://example.com/donkey.png" alt="استیکر الاغ" style="animation-delay: 4s;">
+    <img class="donkey" src="https://example.com/donkey.png" alt="استیکر الاغ" style="animation-delay: 6s;">
+    <img class="donkey" src="https://example.com/donkey.png" alt="استیکر الاغ" style="animation-delay: 8s;">
+    
+    <script>
+        // ایجاد استیکرهای الاغ به صورت داینامیک
+        for (let i = 0; i < 3; i++) {
+            const donkey = document.createElement('img');
+            donkey.src = "https://example.com/donkey.png"; // آدرس استیکر الاغ
+            donkey.className = "donkey";
+            donkey.style.animationDelay = `${i * 2}s`;
+            document.body.appendChild(donkey);
+        }
+    </script>
+</body>
+</html>
